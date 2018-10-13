@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "hackcooper2018-219300",
+  "private_key_id": "5cfee5ade42c5544c0393db88769ba2fa841d483",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCx3w/5os773Pha\nb8x08DYyykRf/yWAxVFjls+BHJrnxpQ+y4m01MM0g4UMhk3NUH3pw6GKmedpHKGv\nvugRRApjl/YI9uI/mOKUwFcbXrcip1SkriaLxOdsMEFhWkmTsp0V3Tr0KRZbQr9e\nLgjm5rFBmN3ADFHSdwa3Bt+b8BubJvnjwlCcPkVdJHH0960cme8Xizubxf8nRY0Z\n/3lFlWk249VZXsOaTlyQic8EjY3PEZDkVu4nECWlQNEM2jxqeVI1v8+PjaTe1NaC\ngyr/CpEp0KO3DIqrcftyb8uXXakFvZTCZZXrsB6AXg7OvJbuJRrj8fxqThpKqeM1\nEtV5vfx7AgMBAAECggEAH5v67EuNCgBCWFv+0xcvIoaEcSTYBtLJ/G88D/9D3gWR\nqbklDzAyQn5O4iNp5x8zSRwddJKWJ71RVHiSKCNVz04diIlLOq8SMQofULtbwzpG\nVf+m1PbYg4btz32qjqdSuCR5ChPVJ8GsXXHD3jjH7lbarXri/YpudI8xpLYeSctu\n80rf8AuXyrXkMOJQzo1ZNtQ04/gFUlHR3xwhRLeUBo0SL3hFDnsPW5jlPGke454u\niLmzsjOJBg2AeqDw+c1pNDuf3ZUUbUchckXlI1+6ytI13Wijo6i/gCdnNMffflV0\nFs7D3X/mXk+cp/0DnnBgkyPd+qWSKRER/eMOTpVBJQKBgQDgdljEG+j+Rfslaq8L\nU02MQuwSJqC8ESVdBfNpCAYsXj4ZgyDRnA4TcjyKr2m9Y1FoMMB1M6y2AorW9EW3\n30FEaYKEsf7BDgLjt+5uxIOsOkwvw+cq0fvARXhVrmJin7lXGtKxf37SBgKI/5QM\n/NZ7P6qlvtx8sDfLoqnRKi3J9wKBgQDK3ORcniZDpNAaVHEEgVc0rYfQPpR9Yhak\n15a4qT9BSJgAYh48wWqiocZUg8aCg/jSgXG7sp3jozoR9t/PlMLaEt4fyhhm5AIU\n3/BaeU6hcTnx2n6Ph8XBHj3Yqn/Ncb6YoKn9h6muBjusVBV1BJLMAnqYZGO9LP94\nvT0mWFfgnQKBgBkCVqWTDoS2O2NR3ar/XxaPpknnb+VEa8tPjG1ZbYaoAXdKOu/f\n2VmlUsWJAdkOJdXcCLWGSmoFIn8MvG/eOiFrOBWc12ufKgdBSRmiX6Fi5XY09563\nwrsLgnrZcTDX5wijfnI0aGbyMHofL9m6mhMlZtgMyfhCkhToTM93SZ7FAoGAKDyu\nEuzPfCVJnZ9YF2OsL2eoA5cWDtSQ1ztnytLPGBzVAWZ0xuo6Q23BD+xfSG3ywZYp\nP+iKxqcOkpecBuljyKtrYXTNaEMbYpaUbu2WuhDiRGVpKwDsKYTdEYen99Dy1AUy\nEnaBImJcHa9D3kT89Pgc5vMqkVBGj+VBJsTpEUUCgYEAoYAjd0hD8vaC1W5p5zrR\nk/2iSu1kW7abGSdI/JzkA6MtyLIMc5ALFysvZQ8Lgn83vhYD2RAminM/+0LpyVmC\nmodTdAv/q0QLhapBfQOb8yx1aAGD8SZpPYiz3X6RNaLo8gRaG+qzO7KBxe5W/q24\nw3VxjV9tZLcG0su1APxM1Sw=\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackcooper-2018@hackcooper2018-219300.iam.gserviceaccount.com",
+  "client_id": "117990672955226880989",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackcooper-2018%40hackcooper2018-219300.iam.gserviceaccount.com"
+}

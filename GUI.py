@@ -23,7 +23,7 @@ from google.cloud.vision import types
 # from google.cloud import storage
 
 os.environ[
-    "GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/kevin/Desktop/HackCooper2018-f61123ce506b.json"
+    "GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/1995h/PycharmProjects/hackthon/HackCooper2018-5cfee5ade42c.json"
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
@@ -31,7 +31,10 @@ client = vision.ImageAnnotatorClient()
 ing = "tmp"
 ingredientlayout = BoxLayout(orientation='vertical', padding=15, spacing=15)
 mainbutton1 = Button(text='Label')
+textinput = TextInput()
 ingredients = []
+quantities = []
+
 
 class Screen1(Screen):
         def __init__(self, **kwargs):
@@ -46,7 +49,6 @@ class Screen1(Screen):
 
         def changer(self, *args):
             self.manager.current = 'screen2'
-
 
         def submitRecipe(self, *args):
             # for ingredient in ingredients:
@@ -65,6 +67,7 @@ class Screen1(Screen):
                                       }
                                       )
                 api.get_ingredients(req_id)
+                user_input = api.struct_user_dic(ingredients, quantities)
                 api.get_recipe_steps(req_id)
 
 
@@ -72,7 +75,7 @@ class Screen2(Screen):
 
     def __init__(self, **kwargs):
         super(Screen2, self).__init__(**kwargs)
-        file_name = 'C:/Users/kevin/Documents/HackCooper/hotdog.png'
+        file_name = 'C:/Users/1995h/PycharmProjects/hackthon/egg.jpg'
 
         # Loads the image into memory
         with io.open(file_name, 'rb') as image_file:
@@ -107,7 +110,6 @@ class Screen2(Screen):
         dropdown1.bind(on_select=lambda instance, x: setattr(mainbutton1, 'text', x))
         layout.add_widget(mainbutton1)
 
-        textinput = TextInput()
         layout.add_widget(textinput)
 
         dropdown2 = DropDown()
@@ -142,13 +144,13 @@ class Screen2(Screen):
     def changer(self,*args):
         labelx = Label(text=mainbutton1.text)
         ingredients.append(mainbutton1.text)
+        quantities.append(textinput.text)
         ingredientlayout.add_widget(labelx)
         ingredientlayout.do_layout()
         self.manager.current = 'screen1'
 
 
 class TestApp(App):
-
         def build(self):
             my_screenmanager = ScreenManager()
             screen1 = Screen1(name='screen1')
