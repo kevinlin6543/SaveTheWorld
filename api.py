@@ -23,6 +23,7 @@ def convert_units(unit, name, amt):
 def get_ingredients(req):
     json_data = json.loads(req.text)
     i = 0
+    print(json_data['sourceUrl'])
     j = json_data['extendedIngredients']
     while i < len(j):
         if j[i]['unit']:
@@ -66,7 +67,7 @@ def title_to_id(response_msg):
     return response_dic
 
 
-r = requests.get(search_recipe_by_ingredients(["eggs"]),
+r = requests.get(search_recipe_by_ingredients(["eggs", "flour"]),
                  headers={
                      "X-Mashape-Key": "anjVTvmAtYmshU4QajQrWhAVY2RWp1Efq2vjsnOXbjSNxYJ4OX"
                  }
