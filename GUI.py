@@ -27,11 +27,11 @@ os.environ[
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
-
 ing = "tmp"
 ingredientlayout = BoxLayout(orientation='vertical', padding=15, spacing=15)
 mainbutton1 = Button(text='Label')
 ingredients = []
+
 
 class Screen1(Screen):
         def __init__(self, **kwargs):

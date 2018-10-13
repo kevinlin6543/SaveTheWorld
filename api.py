@@ -22,26 +22,30 @@ def convert_units(unit, name, amt):
 
 def get_ingredients(req):
     json_data = json.loads(req.text)
+    ingred = []
     i = 0
     print(json_data['sourceUrl'])
     j = json_data['extendedIngredients']
     while i < len(j):
         if j[i]['unit']:
-            print(str(convert_units(j[i]['unit'], j[i]['name'], j[i]['amount'])) + " " + j[i]['unit'] + " of " + j[i]['name'])
+            ingred.append({j[i]['name']: [j[i]['amount'], j[i]['unit']]})
+            # print(str(convert_units(j[i]['unit'], j[i]['name'], j[i]['amount'])) + " " + j[i]['unit'] + " of " + j[i]['name'])
             # print(str(j[i]['amount']) + " " + j[i]['unit'] + " of " + j[i]['name'])
         else:
-            print(str(j[i]['amount']) + " " + j[i]['name'])
+            ingred.append({j[i]['name']: [j[i]['amount'], ""]})
+            # print(str(j[i]['amount']) + " " + j[i]['name'])
         i += 1
+        return ingred
 
 
 def get_recipe_steps(req):
     json_data = json.loads(req.text)
-    x = 0
+    i = 0
     if json_data['analyzedInstructions']:
         j = json_data['analyzedInstructions'][0]['steps']
-        while x < len(j):
-            print(str(j[x]['number']) + ": " + j[x]['step'])
-            x += 1
+        while i < len(j):
+            print(str(j[i]['number']) + ": " + j[i]['step'])
+            i += 1
     # print(json_data['instructions'])
 
 
