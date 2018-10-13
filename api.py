@@ -30,10 +30,10 @@ def get_ingredients(req):
         if j[i]['unit']:
             ingred.append({j[i]['name']: [j[i]['amount'], j[i]['unit']]})
             # print(str(convert_units(j[i]['unit'], j[i]['name'], j[i]['amount'])) + " " + j[i]['unit'] + " of " + j[i]['name'])
-            # print(str(j[i]['amount']) + " " + j[i]['unit'] + " of " + j[i]['name'])
+            print(str(j[i]['amount']) + " " + j[i]['unit'] + " of " + j[i]['name'])
         else:
             ingred.append({j[i]['name']: [j[i]['amount'], ""]})
-            # print(str(j[i]['amount']) + " " + j[i]['name'])
+            print(str(j[i]['amount']) + " " + j[i]['name'])
         i += 1
         return ingred
 
@@ -46,7 +46,7 @@ def get_recipe_steps(req):
         while i < len(j):
             print(str(j[i]['number']) + ": " + j[i]['step'])
             i += 1
-    # print(json_data['instructions'])
+
 
 
 def search_recipe_by_ingredients(ingredients, fill_ingredients=False, number=10, ranking=1):
