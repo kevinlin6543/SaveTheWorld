@@ -67,22 +67,4 @@ def title_to_id(response_msg):
     return response_dic
 
 
-r = requests.get(search_recipe_by_ingredients(["eggs", "flour"]),
-                 headers={
-                     "X-Mashape-Key": "anjVTvmAtYmshU4QajQrWhAVY2RWp1Efq2vjsnOXbjSNxYJ4OX"
-                 }
-                 )
-test = title_to_id(r)
-
-id_list = list(test.values())
-for key, value in test.items():
-    req_id = requests.get(get_recipe(value),
-                     headers={
-                         "X-Mashape-Key": "anjVTvmAtYmshU4QajQrWhAVY2RWp1Efq2vjsnOXbjSNxYJ4OX"
-                     }
-                     )
-    get_ingredients(req_id)
-    get_recipe_steps(req_id)
-
-
-
+# def print_recipe(ing):

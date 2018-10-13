@@ -9,7 +9,9 @@ from kivy.base import runTouchApp
 from kivy.uix.textinput import TextInput
 from kivy.lang import Builder
 from kivy.uix.screenmanager import ScreenManager, Screen
-from kivy.properties import ObjectProperty
+import api
+import requests
+# from kivy.properties import ObjectProperty
 
 import io
 import os
@@ -18,10 +20,10 @@ import argparse
 # Imports the Google Cloud client library
 from google.cloud import vision
 from google.cloud.vision import types
-from google.cloud import storage
+# from google.cloud import storage
 
 os.environ[
-    "GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/Ali Rahman/Documents/HackCooper/HackCooper2018-5cfee5ade42c.json"
+    "GOOGLE_APPLICATION_CREDENTIALS"] = "C:/Users/kevin/Desktop/HackCooper2018-f61123ce506b.json"
 
 # Instantiates a client
 client = vision.ImageAnnotatorClient()
@@ -47,15 +49,30 @@ class Screen1(Screen):
 
 
         def submitRecipe(self, *args):
-            for ingredient in ingredients:
-                print(ingredient)
+            # for ingredient in ingredients:
+            #     print(ingredient)
+            r = requests.get(api.search_recipe_by_ingredients(ingredients),
+                             headers={
+                                 "X-Mashape-Key": "anjVTvmAtYmshU4QajQrWhAVY2RWp1Efq2vjsnOXbjSNxYJ4OX"
+                             }
+                             )
+            test = api.title_to_id(r)
+            # id_list = list(test.values())
+            for key, value in test.items():
+                req_id = requests.get(api.get_recipe(value),
+                                      headers={
+                                          "X-Mashape-Key": "anjVTvmAtYmshU4QajQrWhAVY2RWp1Efq2vjsnOXbjSNxYJ4OX"
+                                      }
+                                      )
+                api.get_ingredients(req_id)
+                api.get_recipe_steps(req_id)
 
 
 class Screen2(Screen):
 
     def __init__(self, **kwargs):
         super(Screen2, self).__init__(**kwargs)
-        file_name = 'C:/Users/Ali Rahman/Documents/HackCooper/banana.jpg'
+        file_name = 'C:/Users/kevin/Documents/HackCooper/hotdog.png'
 
         # Loads the image into memory
         with io.open(file_name, 'rb') as image_file:
@@ -144,3 +161,5 @@ class TestApp(App):
 
 if __name__ == '__main__':
     TestApp().run()
+
+
